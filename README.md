@@ -25,4 +25,4 @@ Start the backend:
     cd Backend
     python main.py
 
-To view a hosted version go to 
+To view a hosted version go to https://climate-chatbot.streamlit.app/ 
