@@ -4,10 +4,15 @@ import json
 import pickle
 import tensorflow as tf
 from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import load_model
 from transformers import BertTokenizer, TFBertModel
 import streamlit as st
 from streamlit_chat import message
+
+# Ensure compatibility with tf.keras if needed
+try:
+    from tensorflow.keras.models import load_model
+except ImportError:
+    from keras.models import load_model
 
 # Load the BERT tokenizer and model
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -78,7 +83,6 @@ def main_(message: str):
         return res
     else:
         return ["I don't know about it", -1, ""]
-
 
 # Streamlit app
 st.title("Climate Change Info Chat-Bot")
