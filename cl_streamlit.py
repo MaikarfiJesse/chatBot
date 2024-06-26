@@ -5,7 +5,8 @@ import pickle
 import tensorflow as tf
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
-from transformers import BertTokenizer, TFBertModel
+from transformers import BertTokenizer
+from transformers.models.bert.modeling_tf_bert import TFBertModel
 import streamlit as st
 from streamlit_chat import message
 
